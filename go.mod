@@ -2,6 +2,10 @@ module github.com/hashicorp/consul-template
 
 go 1.21
 
+// Use a temporary hack to pull in the latest API version via commit hash
+// until we've tagged a new API version in openbao's repo.
+replace github.com/openbao/openbao/api v1.9.2 => github.com/openbao/openbao/api v0.0.0-20231222185543-009633ab13d1
+
 require (
 	github.com/BurntSushi/toml v1.3.2
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc
@@ -17,11 +21,11 @@ require (
 	github.com/hashicorp/logutils v1.0.0
 	github.com/hashicorp/nomad/api v0.0.0-20230103221135-ce00d683f9be
 	github.com/hashicorp/serf v0.10.1 // indirect
-	github.com/hashicorp/vault/api v1.10.0
 	github.com/imdario/mergo v0.3.13
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/mitchellh/hashstructure v1.1.0
 	github.com/mitchellh/mapstructure v1.5.0
+	github.com/openbao/openbao/api v1.9.2
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.8.4
 	golang.org/x/crypto v0.14.0 // indirect
@@ -31,7 +35,7 @@ require (
 
 require (
 	github.com/Masterminds/sprig/v3 v3.2.3
-	github.com/hashicorp/vault/api/auth/kubernetes v0.5.0
+	github.com/openbao/openbao/api/auth/kubernetes v0.0.0-20231222185543-009633ab13d1
 	golang.org/x/exp v0.0.0-20230817173708-d852ddb80c63
 	golang.org/x/text v0.14.0
 )

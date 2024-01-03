@@ -565,7 +565,7 @@ they will have access to plain-text secrets.
 Please note that Vault does not support blocking queries. As a result, Consul
 Template will not immediately reload in the event a secret is changed as it
 does with Consul's key-value store. Consul Template will renew the secret with
-Vault's [Renewer API](https://godoc.org/github.com/hashicorp/vault/api#Renewer).
+Vault's [Renewer API](https://godoc.org/github.com/openbao/openbao/api#Renewer).
 The Renew API tries to use most of the time the secret is good, renewing at
 around 90% of the lease time (as set by Vault).
 

@@ -77,7 +77,7 @@ linters-settings:
           - github.com/hashicorp/hcl
           - github.com/hashicorp/logutils
           - github.com/hashicorp/nomad/api
-          - github.com/hashicorp/vault/api
+          - github.com/openbao/openbao/api
           - github.com/imdario/mergo
           - github.com/mitchellh/go-homedir
           - github.com/mitchellh/hashstructure

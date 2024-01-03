@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"github.com/hashicorp/consul-template/signals"
-	"github.com/hashicorp/vault/api"
+	"github.com/openbao/openbao/api"
 )
 
 func TestMain(m *testing.M) {
