@@ -13,7 +13,7 @@ import (
 	"testing"
 
 	"github.com/hashicorp/consul-template/renderer"
-	"github.com/hashicorp/vault/api"
+	"github.com/openbao/openbao/api"
 )
 
 func Test_VaultPKI_uniqueID(t *testing.T) {

@@ -14,7 +14,7 @@ import (
 	"testing"
 
 	dep "github.com/hashicorp/consul-template/dependency"
-	"github.com/hashicorp/vault/api"
+	"github.com/openbao/openbao/api"
 )
 
 const (

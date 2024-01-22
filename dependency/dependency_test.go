@@ -19,7 +19,7 @@ import (
 	"github.com/hashicorp/consul/api"
 	"github.com/hashicorp/consul/sdk/testutil"
 	nomadapi "github.com/hashicorp/nomad/api"
-	vapi "github.com/hashicorp/vault/api"
+	vapi "github.com/openbao/openbao/api"
 )
 
 const (

@@ -13,7 +13,7 @@ import (
 
 	"github.com/hashicorp/consul-template/config"
 	dep "github.com/hashicorp/consul-template/dependency"
-	"github.com/hashicorp/vault/api"
+	"github.com/openbao/openbao/api"
 )
 
 // approle auto-auth setup in watch_test.go, TestMain()
