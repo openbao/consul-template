@@ -16,12 +16,12 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/hashicorp/consul-template/child"
-	"github.com/hashicorp/consul-template/config"
-	dep "github.com/hashicorp/consul-template/dependency"
-	"github.com/hashicorp/consul-template/renderer"
-	"github.com/hashicorp/consul-template/template"
-	"github.com/hashicorp/consul-template/watch"
+	"github.com/openbao/consul-template/child"
+	"github.com/openbao/consul-template/config"
+	dep "github.com/openbao/consul-template/dependency"
+	"github.com/openbao/consul-template/renderer"
+	"github.com/openbao/consul-template/template"
+	"github.com/openbao/consul-template/watch"
 
 	multierror "github.com/hashicorp/go-multierror"
 )

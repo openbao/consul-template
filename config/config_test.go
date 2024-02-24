@@ -12,7 +12,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hashicorp/consul-template/signals"
+	"github.com/openbao/consul-template/signals"
 	"github.com/openbao/openbao/api"
 )
 

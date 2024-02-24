@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hashicorp/consul-template/config"
+	"github.com/openbao/consul-template/config"
 	"github.com/hashicorp/logutils"
 	"github.com/stretchr/testify/require"
 )

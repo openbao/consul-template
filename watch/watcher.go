@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	dep "github.com/hashicorp/consul-template/dependency"
+	dep "github.com/openbao/consul-template/dependency"
 	"github.com/pkg/errors"
 )
 

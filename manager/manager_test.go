@@ -10,10 +10,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hashicorp/consul-template/config"
-	dep "github.com/hashicorp/consul-template/dependency"
-	"github.com/hashicorp/consul-template/template"
-	"github.com/hashicorp/consul-template/test"
+	"github.com/openbao/consul-template/config"
+	dep "github.com/openbao/consul-template/dependency"
+	"github.com/openbao/consul-template/template"
+	"github.com/openbao/consul-template/test"
 	"github.com/hashicorp/consul/sdk/testutil"
 )
 

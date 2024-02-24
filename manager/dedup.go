@@ -15,10 +15,10 @@ import (
 
 	"github.com/mitchellh/hashstructure"
 
-	"github.com/hashicorp/consul-template/config"
-	dep "github.com/hashicorp/consul-template/dependency"
-	"github.com/hashicorp/consul-template/template"
-	"github.com/hashicorp/consul-template/version"
+	"github.com/openbao/consul-template/config"
+	dep "github.com/openbao/consul-template/dependency"
+	"github.com/openbao/consul-template/template"
+	"github.com/openbao/consul-template/version"
 	consulapi "github.com/hashicorp/consul/api"
 )
 

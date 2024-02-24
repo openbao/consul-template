@@ -10,8 +10,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/hashicorp/consul-template/config"
-	dep "github.com/hashicorp/consul-template/dependency"
+	"github.com/openbao/consul-template/config"
+	dep "github.com/openbao/consul-template/dependency"
 	"github.com/openbao/openbao/api"
 )
 
