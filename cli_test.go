@@ -12,10 +12,10 @@ import (
 	"testing"
 	"time"
 
+	gatedio "github.com/hashicorp/go-gatedio"
 	"github.com/openbao/consul-template/config"
 	"github.com/openbao/consul-template/signals"
 	"github.com/openbao/consul-template/test"
-	gatedio "github.com/hashicorp/go-gatedio"
 )
 
 func TestCLI_ParseFlags(t *testing.T) {

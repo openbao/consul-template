@@ -15,11 +15,11 @@ import (
 
 	"github.com/mitchellh/hashstructure"
 
+	consulapi "github.com/hashicorp/consul/api"
 	"github.com/openbao/consul-template/config"
 	dep "github.com/openbao/consul-template/dependency"
 	"github.com/openbao/consul-template/template"
 	"github.com/openbao/consul-template/version"
-	consulapi "github.com/hashicorp/consul/api"
 )
 
 var (
