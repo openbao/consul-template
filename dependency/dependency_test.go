@@ -15,10 +15,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/openbao/consul-template/test"
 	"github.com/hashicorp/consul/api"
 	"github.com/hashicorp/consul/sdk/testutil"
 	nomadapi "github.com/hashicorp/nomad/api"
+	"github.com/openbao/consul-template/test"
 	vapi "github.com/openbao/openbao/api"
 )
 

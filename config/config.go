@@ -14,10 +14,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/openbao/consul-template/signals"
 	"github.com/hashicorp/hcl"
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/mitchellh/mapstructure"
+	"github.com/openbao/consul-template/signals"
 
 	"github.com/pkg/errors"
 )
