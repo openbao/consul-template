@@ -13,7 +13,7 @@ import (
 	"strings"
 	"testing"
 
-	dep "github.com/hashicorp/consul-template/dependency"
+	dep "github.com/openbao/consul-template/dependency"
 	"github.com/openbao/openbao/api"
 )
 

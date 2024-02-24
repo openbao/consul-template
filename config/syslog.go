@@ -6,7 +6,7 @@ package config
 import (
 	"fmt"
 
-	"github.com/hashicorp/consul-template/version"
+	"github.com/openbao/consul-template/version"
 )
 
 const (
