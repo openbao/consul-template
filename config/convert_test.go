@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/openbao/consul-template/signals"
+	"github.com/openbao/openbao-template/signals"
 )
 
 func TestBool(t *testing.T) {

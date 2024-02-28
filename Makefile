@@ -6,8 +6,8 @@ CURRENT_DIR := $(patsubst %/,%,$(dir $(realpath $(MKFILE_PATH))))
 GOTAGS ?=
 
 # Get the project metadata
-OWNER := "hashicorp"
-NAME := "consul-template"
+OWNER := "openbao"
+NAME := "openbao-template"
 PROJECT := $(shell go list -m | awk "/${NAME}/ {print $0}" )
 GIT_COMMIT ?= $(shell git rev-parse --short HEAD || echo release)
 VERSION := $(shell awk -F\" '/^[ \t]+Version/ { print $$2; exit }' "${CURRENT_DIR}/version/version.go")
@@ -41,8 +41,8 @@ dev:
 docker:
 	@env CGO_ENABLED="0" go build -ldflags "${LD_FLAGS}" -o $(NAME)
 	mkdir -p dist/linux/amd64/
-	cp consul-template dist/linux/amd64/
-	env DOCKER_BUILDKIT=1 docker build -t consul-template .
+	cp openbao-template dist/linux/amd64/
+	env DOCKER_BUILDKIT=1 docker build -t openbao-template .
 .PHONY: docker
 
 # test runs the test suite.
@@ -60,7 +60,7 @@ test-race:
 # _cleanup removes any previous binaries
 clean:
 	@rm -rf "${CURRENT_DIR}/dist/"
-	@rm -f "consul-template"
+	@rm -f "openbao-template"
 .PHONY: clean
 
 # Add/Update the "Table Of Contents" in the README.md
@@ -78,3 +78,8 @@ lint:
 	@echo "==> Running golangci-lint"
 	GOWORK=off golangci-lint run --build-tags '$(GOTAGS)'
 .PHONY: lint
+
+# format
+fmt:
+	@echo "==> Running gofumpt"
+	go run mvdan.cc/gofumpt@latest -w -l *.go */*.go

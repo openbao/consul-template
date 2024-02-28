@@ -13,7 +13,7 @@ import (
 const (
 	// XXX Change use to api.EnvVaultSkipVerify once we've updated vendored
 	// vault to version 1.1.0 or newer.
-	EnvVaultSkipVerify = "VAULT_SKIP_VERIFY"
+	EnvVaultSkipVerify = "BAO_SKIP_VERIFY"
 
 	// DefaultVaultRenewToken is the default value for if the Vault token should
 	// be renewed.
@@ -56,7 +56,7 @@ type VaultConfig struct {
 	Enabled *bool `mapstructure:"enabled"`
 
 	// Namespace is the Vault namespace to use for reading/writing secrets. This can
-	// also be set via the VAULT_NAMESPACE environment variable.
+	// also be set via the BAO_NAMESPACE environment variable.
 	Namespace *string `mapstructure:"namespace"`
 
 	// RenewToken renews the Vault token.
@@ -69,7 +69,7 @@ type VaultConfig struct {
 	SSL *SSLConfig `mapstructure:"ssl"`
 
 	// Token is the Vault token to communicate with for requests. It may be
-	// a wrapped token or a real token. This can also be set via the VAULT_TOKEN
+	// a wrapped token or a real token. This can also be set via the BAO_TOKEN
 	// environment variable, or via the VaultAgentTokenFile.
 	Token *string `mapstructure:"token" json:"-"`
 
@@ -107,7 +107,7 @@ type VaultConfig struct {
 	// authentication makes it easy to introduce a Vault token into
 	// a Kubernetes Pod.
 	//
-	// This can also be set via the VAULT_K8S_AUTH_ROLE_NAME.
+	// This can also be set via the BAO_K8S_AUTH_ROLE_NAME.
 	K8SAuthRoleName *string `mapstructure:"k8s_auth_role_name"`
 	// K8SServiceAccountTokenPath is the path of file that contains
 	// a K8SServiceAccountToken. It will be ignored if K8SServiceAccountToken
@@ -115,16 +115,16 @@ type VaultConfig struct {
 	//
 	// Default value is "/run/secrets/kubernetes.io/serviceaccount/token".
 	//
-	// This can also be set via the VAULT_K8S_SERVICE_ACCOUNT_TOKEN_PATH.
+	// This can also be set via the BAO_K8S_SERVICE_ACCOUNT_TOKEN_PATH.
 	K8SServiceAccountTokenPath *string `mapstructure:"k8s_service_account_token_path"`
 	// Value of an account token for k8s auth method.
 	//
-	// This can also be set via the VAULT_K8S_SERVICE_ACCOUNT_TOKEN.
+	// This can also be set via the BAO_K8S_SERVICE_ACCOUNT_TOKEN.
 	K8SServiceAccountToken *string `mapstructure:"k8s_service_account_token"`
 	// K8SServiceMountPath is a part of k8s login path, by default the value is
 	// "kubernetes". In this case a full path will be "auth/kubernetes/login".
 	//
-	// This can also be set via the VAULT_K8S_SERVICE_MOUNT_PATH.
+	// This can also be set via the BAO_K8S_SERVICE_MOUNT_PATH.
 	K8SServiceMountPath *string `mapstructure:"k8s_service_mount_path"`
 }
 
@@ -285,7 +285,7 @@ func (c *VaultConfig) Finalize() {
 	}
 
 	if c.Namespace == nil {
-		c.Namespace = stringFromEnv([]string{"VAULT_NAMESPACE"}, "")
+		c.Namespace = stringFromEnv([]string{"BAO_NAMESPACE"}, "")
 	}
 
 	if c.Retry == nil {
@@ -328,10 +328,10 @@ func (c *VaultConfig) Finalize() {
 	// Order of precedence
 	// 1. `vault_agent_token_file` configuration value
 	// 2. `token` configuration value`
-	// 3. `VAULT_TOKEN` environment variable
+	// 3. `BAO_TOKEN` environment variable
 	if c.Token == nil {
 		c.Token = stringFromEnv([]string{
-			"VAULT_TOKEN",
+			"BAO_TOKEN",
 		}, "")
 	}
 
@@ -356,7 +356,7 @@ func (c *VaultConfig) Finalize() {
 			default_renew = false
 		}
 		c.RenewToken = boolFromEnv([]string{
-			"VAULT_RENEW_TOKEN",
+			"BAO_RENEW_TOKEN",
 		}, default_renew)
 	}
 
@@ -367,7 +367,7 @@ func (c *VaultConfig) Finalize() {
 
 	if c.UnwrapToken == nil {
 		c.UnwrapToken = boolFromEnv([]string{
-			"VAULT_UNWRAP_TOKEN",
+			"BAO_UNWRAP_TOKEN",
 		}, DefaultVaultUnwrapToken)
 	}
 
@@ -385,22 +385,22 @@ func (c *VaultConfig) Finalize() {
 
 	if c.K8SAuthRoleName == nil {
 		c.K8SAuthRoleName = stringFromEnv([]string{
-			"VAULT_K8S_AUTH_ROLE_NAME",
+			"BAO_K8S_AUTH_ROLE_NAME",
 		}, "")
 	}
 	if c.K8SServiceAccountToken == nil {
 		c.K8SServiceAccountToken = stringFromEnv([]string{
-			"VAULT_K8S_SERVICE_ACCOUNT_TOKEN",
+			"BAO_K8S_SERVICE_ACCOUNT_TOKEN",
 		}, "")
 	}
 	if c.K8SServiceAccountTokenPath == nil {
 		c.K8SServiceAccountTokenPath = stringFromEnv([]string{
-			"VAULT_K8S_SERVICE_ACCOUNT_TOKEN_PATH",
+			"BAO_K8S_SERVICE_ACCOUNT_TOKEN_PATH",
 		}, DefaultK8SServiceAccountTokenPath)
 	}
 	if c.K8SServiceMountPath == nil {
 		c.K8SServiceMountPath = stringFromEnv([]string{
-			"VAULT_K8S_SERVICE_MOUNT_PATH",
+			"BAO_K8S_SERVICE_MOUNT_PATH",
 		}, DefaultK8SServiceMountPath)
 	}
 }

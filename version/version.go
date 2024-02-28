@@ -6,12 +6,12 @@ package version
 import "fmt"
 
 const (
-	Version           = "0.35.0"
+	Version           = "0.36.0"
 	VersionPrerelease = "" // "-dev", "-beta", "-rc1", etc. (include dash)
 )
 
 var (
-	Name      string = "consul-template"
+	Name      string = "openbao-template"
 	GitCommit string
 
 	HumanVersion = fmt.Sprintf("%s v%s%s (%s)",

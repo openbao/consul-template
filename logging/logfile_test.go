@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"github.com/hashicorp/logutils"
-	"github.com/openbao/consul-template/config"
+	"github.com/openbao/openbao-template/config"
 	"github.com/stretchr/testify/require"
 )
 

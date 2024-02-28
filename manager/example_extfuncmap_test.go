@@ -11,8 +11,8 @@ import (
 	"path"
 	"text/template"
 
-	"github.com/openbao/consul-template/config"
-	"github.com/openbao/consul-template/manager"
+	"github.com/openbao/openbao-template/config"
+	"github.com/openbao/openbao-template/manager"
 )
 
 // ExampleCustomFuncMap demonstrates a minimum [consul-template/manager]

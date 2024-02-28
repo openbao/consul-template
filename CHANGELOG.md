@@ -1,3 +1,13 @@
+## v0.36.0-bao
+
+NEW FEATURES:
+* Read `BAO_`-prefixed variables over `VAULT_`-prefixed variables,
+  switching to OpenBao's API client.
+
+REMOVALS:
+* Consul & Nomad templating functionality. This fork will be for
+  OpenBao only.
+
 ## v0.35.0 (November 7, 2023)
 
 NEW FEATURES:

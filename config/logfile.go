@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/openbao/consul-template/version"
+	"github.com/openbao/openbao-template/version"
 )
 
 var (

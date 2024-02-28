@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/openbao/consul-template/renderer"
+	"github.com/openbao/openbao-template/renderer"
 	"github.com/openbao/openbao/api"
 )
 

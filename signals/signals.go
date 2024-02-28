@@ -16,8 +16,10 @@ var SIGNULL os.Signal = syscall.Signal(0)
 
 // ValidSignals is the list of all valid signals. This is built at runtime
 // because it is OS-dependent.
-var ValidSignals []string
-var MonitoredSignals []os.Signal
+var (
+	ValidSignals     []string
+	MonitoredSignals []os.Signal
+)
 
 func init() {
 	valid := make([]string, 0, len(SignalLookup))

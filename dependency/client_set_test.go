@@ -11,7 +11,7 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/openbao/consul-template/test"
+	"github.com/openbao/openbao-template/test"
 	"github.com/openbao/openbao/api"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

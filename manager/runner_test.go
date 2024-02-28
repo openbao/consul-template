@@ -14,10 +14,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/openbao/consul-template/child"
-	"github.com/openbao/consul-template/config"
-	dep "github.com/openbao/consul-template/dependency"
-	"github.com/openbao/consul-template/template"
+	"github.com/openbao/openbao-template/child"
+	"github.com/openbao/openbao-template/config"
+	dep "github.com/openbao/openbao-template/dependency"
+	"github.com/openbao/openbao-template/template"
 )
 
 func TestRunner_initTemplates(t *testing.T) {
@@ -466,7 +466,7 @@ func TestRunner_Run(t *testing.T) {
 				},
 			},
 			func(t *testing.T, r *Runner, out string) {
-				exp := "VAULT_ADDR=1.2.3.4"
+				exp := "BAO_ADDR=1.2.3.4"
 				if !strings.Contains(out, exp) {
 					t.Errorf("\nexp: %#v\nact: %#v", exp, out)
 				}

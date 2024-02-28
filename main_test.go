@@ -9,7 +9,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/openbao/consul-template/test"
+	"github.com/openbao/openbao-template/test"
 )
 
 func TestMain(m *testing.M) {
