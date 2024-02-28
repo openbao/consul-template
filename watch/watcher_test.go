@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"testing"
 
-	dep "github.com/openbao/consul-template/dependency"
+	dep "github.com/openbao/openbao-template/dependency"
 )
 
 func TestAdd_updatesMap(t *testing.T) {

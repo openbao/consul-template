@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/openbao/consul-template/config"
-	dep "github.com/openbao/consul-template/dependency"
+	"github.com/openbao/openbao-template/config"
+	dep "github.com/openbao/openbao-template/dependency"
 	"github.com/openbao/openbao/api"
 )
 

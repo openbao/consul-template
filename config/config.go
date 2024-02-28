@@ -17,9 +17,10 @@ import (
 	"github.com/hashicorp/hcl"
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/mitchellh/mapstructure"
-	"github.com/openbao/consul-template/signals"
-
+	"github.com/openbao/openbao/api"
 	"github.com/pkg/errors"
+
+	"github.com/openbao/openbao-template/signals"
 )
 
 const (
@@ -403,7 +404,6 @@ func FromPath(path string) (*Config, error) {
 
 			return nil
 		})
-
 		if err != nil {
 			return nil, errors.Wrap(err, "walk error")
 		}
@@ -592,7 +592,7 @@ func (c *Config) Finalize() {
 
 func stringFromEnv(list []string, def string) *string {
 	for _, s := range list {
-		if v := os.Getenv(s); v != "" {
+		if v := api.ReadBaoVariable(s); v != "" {
 			return String(strings.TrimSpace(v))
 		}
 	}
@@ -611,7 +611,7 @@ func stringFromFile(list []string, def string) *string {
 
 func antiboolFromEnv(list []string, def bool) *bool {
 	for _, s := range list {
-		if v := os.Getenv(s); v != "" {
+		if v := api.ReadBaoVariable(s); v != "" {
 			b, err := strconv.ParseBool(v)
 			if err == nil {
 				return Bool(!b)
@@ -623,7 +623,7 @@ func antiboolFromEnv(list []string, def bool) *bool {
 
 func boolFromEnv(list []string, def bool) *bool {
 	for _, s := range list {
-		if v := os.Getenv(s); v != "" {
+		if v := api.ReadBaoVariable(s); v != "" {
 			b, err := strconv.ParseBool(v)
 			if err == nil {
 				return Bool(b)

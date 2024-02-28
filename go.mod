@@ -1,12 +1,9 @@
-module github.com/openbao/consul-template
+module github.com/openbao/openbao-template
 
 go 1.21
 
-// Use a temporary hack to pull in the latest API version via commit hash
-// until we've tagged a new API version in openbao's repo.
-replace github.com/openbao/openbao/api v1.9.2 => github.com/openbao/openbao/api v0.0.0-20231222185543-009633ab13d1
-
-replace github.com/openbao/openbao/api/auth/kubernetes v0.0.0-00010101000000-000000000000 => github.com/openbao/openbao/api/auth/kubernetes v0.0.0-20231222185543-009633ab13d1
+// Temporary hack until go.mods are updated:
+replace github.com/openbao/openbao/api v1.9.2 => github.com/openbao/openbao/api v0.0.0-20240227182507-a8c90d250c17
 
 require (
 	github.com/BurntSushi/toml v1.3.2
@@ -32,7 +29,7 @@ require (
 	github.com/mitchellh/mapstructure v1.5.0
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect
 	github.com/openbao/openbao/api v1.9.2
-	github.com/openbao/openbao/api/auth/kubernetes v0.0.0-00010101000000-000000000000
+	github.com/openbao/openbao/api/auth/kubernetes v0.0.0-20240227182507-a8c90d250c17
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.8.4
 	golang.org/x/crypto v0.17.0 // indirect

@@ -6,7 +6,7 @@ package template
 import (
 	"sync"
 
-	dep "github.com/openbao/consul-template/dependency"
+	dep "github.com/openbao/openbao-template/dependency"
 )
 
 // Brain is what Template uses to determine the values that are

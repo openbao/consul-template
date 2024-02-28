@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	dep "github.com/openbao/consul-template/dependency"
+	dep "github.com/openbao/openbao-template/dependency"
 )
 
 var errLookup = fmt.Errorf("lookup error")

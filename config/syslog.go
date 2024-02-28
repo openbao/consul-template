@@ -6,7 +6,7 @@ package config
 import (
 	"fmt"
 
-	"github.com/openbao/consul-template/version"
+	"github.com/openbao/openbao-template/version"
 )
 
 const (

@@ -13,12 +13,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/openbao/consul-template/config"
-	"github.com/openbao/consul-template/logging"
-	"github.com/openbao/consul-template/manager"
-	"github.com/openbao/consul-template/service_os"
-	"github.com/openbao/consul-template/signals"
-	"github.com/openbao/consul-template/version"
+	"github.com/openbao/openbao-template/config"
+	"github.com/openbao/openbao-template/logging"
+	"github.com/openbao/openbao-template/manager"
+	"github.com/openbao/openbao-template/service_os"
+	"github.com/openbao/openbao-template/signals"
+	"github.com/openbao/openbao-template/version"
 )
 
 // Exit codes are int values that represent an exit code for a particular error.
@@ -681,7 +681,7 @@ Options:
       Adds a new template to watch on disk in the format 'in:out(:command)'
 
   -template-error-fatal=<bool>
-      Control whether template errors cause consul-template to immediately exit.
+      Control whether template errors cause openbao-template to immediately exit.
       This overrides the per-template setting.
 
   -vault-addr=<address>

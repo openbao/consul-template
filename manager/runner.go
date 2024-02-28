@@ -15,12 +15,12 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/openbao/consul-template/child"
-	"github.com/openbao/consul-template/config"
-	dep "github.com/openbao/consul-template/dependency"
-	"github.com/openbao/consul-template/renderer"
-	"github.com/openbao/consul-template/template"
-	"github.com/openbao/consul-template/watch"
+	"github.com/openbao/openbao-template/child"
+	"github.com/openbao/openbao-template/config"
+	dep "github.com/openbao/openbao-template/dependency"
+	"github.com/openbao/openbao-template/renderer"
+	"github.com/openbao/openbao-template/template"
+	"github.com/openbao/openbao-template/watch"
 
 	multierror "github.com/hashicorp/go-multierror"
 )
@@ -1033,35 +1033,35 @@ func (r *Runner) childEnv() []string {
 	m := make(map[string]string)
 
 	if config.StringPresent(r.config.Vault.Address) {
-		m["VAULT_ADDR"] = config.StringVal(r.config.Vault.Address)
+		m["BAO_ADDR"] = config.StringVal(r.config.Vault.Address)
 	}
 
 	if !config.BoolVal(r.config.Vault.SSL.Verify) {
-		m["VAULT_SKIP_VERIFY"] = "true"
+		m["BAO_SKIP_VERIFY"] = "true"
 	}
 
 	if config.StringPresent(r.config.Vault.SSL.Cert) {
-		m["VAULT_CLIENT_CERT"] = config.StringVal(r.config.Vault.SSL.Cert)
+		m["BAO_CLIENT_CERT"] = config.StringVal(r.config.Vault.SSL.Cert)
 	}
 
 	if config.StringPresent(r.config.Vault.SSL.Key) {
-		m["VAULT_CLIENT_KEY"] = config.StringVal(r.config.Vault.SSL.Key)
+		m["BAO_CLIENT_KEY"] = config.StringVal(r.config.Vault.SSL.Key)
 	}
 
 	if config.StringPresent(r.config.Vault.SSL.CaPath) {
-		m["VAULT_CAPATH"] = config.StringVal(r.config.Vault.SSL.CaPath)
+		m["BAO_CAPATH"] = config.StringVal(r.config.Vault.SSL.CaPath)
 	}
 
 	if config.StringPresent(r.config.Vault.SSL.CaCert) {
-		m["VAULT_CACERT"] = config.StringVal(r.config.Vault.SSL.CaCert)
+		m["BAO_CACERT"] = config.StringVal(r.config.Vault.SSL.CaCert)
 	}
 
 	if config.StringPresent(r.config.Vault.SSL.CaCertBytes) {
-		m["VAULT_CACERT_BYTES"] = config.StringVal(r.config.Vault.SSL.CaCertBytes)
+		m["BAO_CACERT_BYTES"] = config.StringVal(r.config.Vault.SSL.CaCertBytes)
 	}
 
 	if config.StringPresent(r.config.Vault.SSL.ServerName) {
-		m["VAULT_TLS_SERVER_NAME"] = config.StringVal(r.config.Vault.SSL.ServerName)
+		m["BAO_TLS_SERVER_NAME"] = config.StringVal(r.config.Vault.SSL.ServerName)
 	}
 
 	// Append runner-supplied env (this is supplied programmatically).

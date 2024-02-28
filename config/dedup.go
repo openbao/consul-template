@@ -10,7 +10,7 @@ import (
 
 const (
 	// DefaultDedupPrefix is the default prefix used for deduplication mode.
-	DefaultDedupPrefix = "consul-template/dedup/"
+	DefaultDedupPrefix = "openbao-template/dedup/"
 
 	// DefaultDedupTTL is the default TTL for deduplicate mode.
 	DefaultDedupTTL = 15 * time.Second

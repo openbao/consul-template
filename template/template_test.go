@@ -16,7 +16,7 @@ import (
 	"testing"
 	"time"
 
-	dep "github.com/openbao/consul-template/dependency"
+	dep "github.com/openbao/openbao-template/dependency"
 	"github.com/stretchr/testify/require"
 )
 

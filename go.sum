@@ -109,10 +109,10 @@ github.com/mitchellh/mapstructure v1.5.0/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RR
 github.com/mitchellh/reflectwalk v1.0.0/go.mod h1:mSTlrgnPZtwu0c4WaC2kGObEpuNDbx0jmZXqmk4esnw=
 github.com/mitchellh/reflectwalk v1.0.2 h1:G2LzWKi524PWgd3mLHV8Y5k7s6XUvT0Gef6zxSIeXaQ=
 github.com/mitchellh/reflectwalk v1.0.2/go.mod h1:mSTlrgnPZtwu0c4WaC2kGObEpuNDbx0jmZXqmk4esnw=
-github.com/openbao/openbao/api v0.0.0-20231222185543-009633ab13d1 h1:tz26SdhQlJpHSqjl+zPHhuU97/UEV19xmFkwvgE3Dd8=
-github.com/openbao/openbao/api v0.0.0-20231222185543-009633ab13d1/go.mod h1:rpTE5IyLk+IdcK1wVRfV6uzYcBgAyKK6fjwiaYgO+Oc=
-github.com/openbao/openbao/api/auth/kubernetes v0.0.0-20231222185543-009633ab13d1 h1:+64SuQOMb7mb3GcbxxJ17BgOCUZCQgid7AiO43poUrA=
-github.com/openbao/openbao/api/auth/kubernetes v0.0.0-20231222185543-009633ab13d1/go.mod h1:aQFIYCMM+Eh/axvoRMeeAwwRQiYGhmLeC+tuWwelDtY=
+github.com/openbao/openbao/api v0.0.0-20240227182507-a8c90d250c17 h1:JE6Npq/JIiz9UpBiVvMAXd2APHmRS723j632Qdc99p8=
+github.com/openbao/openbao/api v0.0.0-20240227182507-a8c90d250c17/go.mod h1:rpTE5IyLk+IdcK1wVRfV6uzYcBgAyKK6fjwiaYgO+Oc=
+github.com/openbao/openbao/api/auth/kubernetes v0.0.0-20240227182507-a8c90d250c17 h1:JEeYyBNOZFkOE4ftCPCqnriREN4wYbXUM4GZZ9EEEG0=
+github.com/openbao/openbao/api/auth/kubernetes v0.0.0-20240227182507-a8c90d250c17/go.mod h1:aQFIYCMM+Eh/axvoRMeeAwwRQiYGhmLeC+tuWwelDtY=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=

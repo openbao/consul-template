@@ -16,7 +16,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/openbao/consul-template/signals"
+	"github.com/openbao/openbao-template/signals"
 )
 
 var (

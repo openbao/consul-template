@@ -25,7 +25,7 @@ func TestSyslogFilter(t *testing.T) {
 		}
 	}
 
-	l, err := gsyslog.NewLogger(gsyslog.LOG_NOTICE, "LOCAL0", "consul-template")
+	l, err := gsyslog.NewLogger(gsyslog.LOG_NOTICE, "LOCAL0", "openbao-template")
 	if err != nil {
 		t.Fatalf("err: %s", err)
 	}

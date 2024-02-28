@@ -1,7 +1,7 @@
 // Copyright (c) HashiCorp, Inc.
 // SPDX-License-Identifier: MPL-2.0
 
-package main // import "github.com/openbao/consul-template"
+package main // import "github.com/openbao/openbao-template"
 
 import "os"
 

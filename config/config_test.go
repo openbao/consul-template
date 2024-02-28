@@ -12,12 +12,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/openbao/consul-template/signals"
+	"github.com/openbao/openbao-template/signals"
 	"github.com/openbao/openbao/api"
 )
 
 func TestMain(m *testing.M) {
 	// clear out any potential local config for tests
+	os.Unsetenv("BAO_ADDR")
+	os.Unsetenv("BAO_TOKEN")
+	os.Unsetenv("BAO_DEV_ROOT_TOKEN_ID")
 	os.Unsetenv("VAULT_ADDR")
 	os.Unsetenv("VAULT_TOKEN")
 	os.Unsetenv("VAULT_DEV_ROOT_TOKEN_ID")
@@ -2090,7 +2093,7 @@ func TestDefaultConfig(t *testing.T) {
 		err bool
 	}{
 		{
-			"VAULT_ADDR",
+			"BAO_ADDR",
 			"http://1.2.3.4:8200",
 			&Config{
 				Vault: &VaultConfig{
@@ -2100,7 +2103,7 @@ func TestDefaultConfig(t *testing.T) {
 			false,
 		},
 		{
-			"VAULT_TOKEN",
+			"BAO_TOKEN",
 			"abcd1234",
 			&Config{
 				Vault: &VaultConfig{
@@ -2110,7 +2113,7 @@ func TestDefaultConfig(t *testing.T) {
 			false,
 		},
 		{
-			"VAULT_UNWRAP_TOKEN",
+			"BAO_UNWRAP_TOKEN",
 			"true",
 			&Config{
 				Vault: &VaultConfig{
@@ -2120,7 +2123,7 @@ func TestDefaultConfig(t *testing.T) {
 			false,
 		},
 		{
-			"VAULT_UNWRAP_TOKEN",
+			"BAO_UNWRAP_TOKEN",
 			"false",
 			&Config{
 				Vault: &VaultConfig{
@@ -2166,41 +2169,41 @@ func TestDefaultConfig(t *testing.T) {
 			false,
 		},
 		{
-			"VAULT_K8S_AUTH_ROLE_NAME",
-			"VAULT_K8S_AUTH_ROLE_NAME",
+			"BAO_K8S_AUTH_ROLE_NAME",
+			"BAO_K8S_AUTH_ROLE_NAME",
 			&Config{
 				Vault: &VaultConfig{
-					K8SAuthRoleName: String("VAULT_K8S_AUTH_ROLE_NAME"),
+					K8SAuthRoleName: String("BAO_K8S_AUTH_ROLE_NAME"),
 				},
 			},
 			false,
 		},
 		{
-			"VAULT_K8S_SERVICE_ACCOUNT_TOKEN",
-			"VAULT_K8S_SERVICE_ACCOUNT_TOKEN",
+			"BAO_K8S_SERVICE_ACCOUNT_TOKEN",
+			"BAO_K8S_SERVICE_ACCOUNT_TOKEN",
 			&Config{
 				Vault: &VaultConfig{
-					K8SServiceAccountToken: String("VAULT_K8S_SERVICE_ACCOUNT_TOKEN"),
+					K8SServiceAccountToken: String("BAO_K8S_SERVICE_ACCOUNT_TOKEN"),
 				},
 			},
 			false,
 		},
 		{
-			"VAULT_K8S_SERVICE_ACCOUNT_TOKEN_PATH",
-			"VAULT_K8S_SERVICE_ACCOUNT_TOKEN_PATH",
+			"BAO_K8S_SERVICE_ACCOUNT_TOKEN_PATH",
+			"BAO_K8S_SERVICE_ACCOUNT_TOKEN_PATH",
 			&Config{
 				Vault: &VaultConfig{
-					K8SServiceAccountTokenPath: String("VAULT_K8S_SERVICE_ACCOUNT_TOKEN_PATH"),
+					K8SServiceAccountTokenPath: String("BAO_K8S_SERVICE_ACCOUNT_TOKEN_PATH"),
 				},
 			},
 			false,
 		},
 		{
-			"VAULT_K8S_SERVICE_MOUNT_PATH",
-			"VAULT_K8S_SERVICE_MOUNT_PATH",
+			"BAO_K8S_SERVICE_MOUNT_PATH",
+			"BAO_K8S_SERVICE_MOUNT_PATH",
 			&Config{
 				Vault: &VaultConfig{
-					K8SServiceMountPath: String("VAULT_K8S_SERVICE_MOUNT_PATH"),
+					K8SServiceMountPath: String("BAO_K8S_SERVICE_MOUNT_PATH"),
 				},
 			},
 			false,

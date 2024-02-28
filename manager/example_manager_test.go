@@ -10,8 +10,8 @@ import (
 	"os"
 	"path"
 
-	"github.com/openbao/consul-template/config"
-	"github.com/openbao/consul-template/manager"
+	"github.com/openbao/openbao-template/config"
+	"github.com/openbao/openbao-template/manager"
 )
 
 // This example demonstrates a minimum configuration to create, configure, and

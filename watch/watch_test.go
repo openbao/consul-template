@@ -13,7 +13,7 @@ import (
 	"strings"
 	"testing"
 
-	dep "github.com/openbao/consul-template/dependency"
+	dep "github.com/openbao/openbao-template/dependency"
 	"github.com/openbao/openbao/api"
 )
 
@@ -132,7 +132,7 @@ func vaultTokenSetup(clients *dep.ClientSet) string {
 // returns path to token file (which is created by the agent run)
 // token file isn't cleaned, so use returned path to remove it when done
 func runVaultAgent(clients *dep.ClientSet, role_id string) string {
-	dir, err := os.MkdirTemp("", "consul-template-test")
+	dir, err := os.MkdirTemp("", "openbao-template-test")
 	if err != nil {
 		panic(err)
 	}

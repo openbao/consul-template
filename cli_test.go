@@ -13,8 +13,8 @@ import (
 	"time"
 
 	gatedio "github.com/hashicorp/go-gatedio"
-	"github.com/openbao/consul-template/config"
-	"github.com/openbao/consul-template/signals"
+	"github.com/openbao/openbao-template/config"
+	"github.com/openbao/openbao-template/signals"
 )
 
 func TestCLI_ParseFlags(t *testing.T) {
@@ -171,11 +171,11 @@ func TestCLI_ParseFlags(t *testing.T) {
 		},
 		{
 			"exec-env-denylist",
-			[]string{"-exec-env-denylist", "VAULT_*"},
+			[]string{"-exec-env-denylist", "BAO_*"},
 			&config.Config{
 				Exec: &config.ExecConfig{
 					Env: &config.EnvConfig{
-						Denylist: []string{"VAULT_*"},
+						Denylist: []string{"BAO_*"},
 					},
 				},
 			},
@@ -184,13 +184,13 @@ func TestCLI_ParseFlags(t *testing.T) {
 		{
 			"exec-env-denylist-multiple",
 			[]string{
-				"-exec-env-denylist", "VAULT_*",
+				"-exec-env-denylist", "BAO_*",
 			},
 			&config.Config{
 				Exec: &config.ExecConfig{
 					Env: &config.EnvConfig{
 						Denylist: []string{
-							"VAULT_*",
+							"BAO_*",
 						},
 					},
 				},
@@ -679,7 +679,7 @@ func TestCLI_Run(t *testing.T) {
 			out := gatedio.NewByteBuffer()
 			cli := NewCLI(out, out)
 
-			tc.args = append([]string{"consul-template"}, tc.args...)
+			tc.args = append([]string{"openbao-template"}, tc.args...)
 			exit := cli.Run(tc.args)
 			tc.f(t, exit, out.String())
 		})

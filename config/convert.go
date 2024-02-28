@@ -8,7 +8,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/openbao/consul-template/signals"
+	"github.com/openbao/openbao-template/signals"
 )
 
 // Bool returns a pointer to the given bool.
