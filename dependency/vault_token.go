@@ -4,7 +4,7 @@
 package dependency
 
 import (
-	"github.com/openbao/openbao/api"
+	"github.com/openbao/openbao/api/v2"
 	"github.com/pkg/errors"
 )
 

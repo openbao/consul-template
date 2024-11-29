@@ -14,7 +14,7 @@ import (
 	"testing"
 
 	dep "github.com/openbao/openbao-template/dependency"
-	"github.com/openbao/openbao/api"
+	"github.com/openbao/openbao/api/v2"
 )
 
 const (

@@ -35,7 +35,7 @@ import (
 	yaml "gopkg.in/yaml.v2"
 
 	dep "github.com/openbao/openbao-template/dependency"
-	"github.com/openbao/openbao/api"
+	"github.com/openbao/openbao/api/v2"
 )
 
 // now is function that represents the current time in UTC. This is here

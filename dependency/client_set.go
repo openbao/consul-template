@@ -14,8 +14,8 @@ import (
 	"time"
 
 	rootcerts "github.com/hashicorp/go-rootcerts"
-	vaultapi "github.com/openbao/openbao/api"
-	vaultkubernetesauth "github.com/openbao/openbao/api/auth/kubernetes"
+	vaultapi "github.com/openbao/openbao/api/v2"
+	vaultkubernetesauth "github.com/openbao/openbao/api/auth/kubernetes/v2"
 )
 
 // ClientSet is a collection of clients that dependencies use to communicate
