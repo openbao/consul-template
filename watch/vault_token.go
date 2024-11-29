@@ -12,7 +12,7 @@ import (
 
 	"github.com/openbao/openbao-template/config"
 	dep "github.com/openbao/openbao-template/dependency"
-	"github.com/openbao/openbao/api"
+	"github.com/openbao/openbao/api/v2"
 )
 
 // VaultTokenWatcher monitors the vault token for updates

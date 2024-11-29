@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/openbao/openbao/api"
+	"github.com/openbao/openbao/api/v2"
 )
 
 const (

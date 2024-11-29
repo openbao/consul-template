@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"github.com/openbao/openbao-template/signals"
-	"github.com/openbao/openbao/api"
+	"github.com/openbao/openbao/api/v2"
 )
 
 func TestMain(m *testing.M) {

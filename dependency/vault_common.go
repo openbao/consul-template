@@ -11,7 +11,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/openbao/openbao/api"
+	"github.com/openbao/openbao/api/v2"
 )
 
 var (
